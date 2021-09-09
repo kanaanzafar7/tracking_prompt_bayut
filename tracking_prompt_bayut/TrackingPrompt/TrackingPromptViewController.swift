@@ -10,13 +10,13 @@ class TrackingPromptViewController: UIViewController {
         super.viewDidLayoutSubviews()
         let screenRect = UIScreen.main.bounds
         let screenWidth = screenRect.size.width
-        let screenHeight = screenRect.size.height
-        scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight)
 
-//        let contentRect: CGRect = scrollView.subviews.reduce(into: .zero) { rect, view in
-//            rect = rect.union(view.frame)
-  //      }
-//        scrollView.contentSize = contentRect.size
+
+        let contentRect: CGRect = scrollView.subviews.reduce(into: .zero) { rect, view in
+            rect = rect.union(view.frame)
+        }
+        let size = CGSize(width: screenWidth, height: contentRect.height)
+                scrollView.contentSize = size
     }
     override func viewDidLoad() {
         super.viewDidLoad()
