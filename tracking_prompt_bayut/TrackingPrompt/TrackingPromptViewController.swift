@@ -8,8 +8,14 @@ class TrackingPromptViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        permissionDescriptionLabel.text = "We need your permission to ensure the content we share is relevant and personalized to you.\n\nTap Allow on the next screen to help us personalize your experience."
         continueButton.layer.cornerRadius = 4
+        let permissionDescription = "We need your permission to ensure the content we share is relevant and personalized to you.\n\nTap \"Allow\" on the next screen to help us personalize your experience."
+        let attributedString = NSMutableAttributedString.init(string: permissionDescription)
+        let range = NSString(string: permissionDescription).range(of: "\"Allow\"", options: String.CompareOptions.caseInsensitive)
+        attributedString.addAttributes([NSAttributedString.Key.foregroundColor: UIColor.black,
+                                        NSAttributedString.Key.font : UIFont(name: "Lato-Bold", size: 16)!
+        ], range: range)
+        permissionDescriptionLabel.attributedText = attributedString
     }
     
     @IBAction func onPressedContinue(_ sender: UIButton) {

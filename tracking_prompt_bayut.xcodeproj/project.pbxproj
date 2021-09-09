@@ -15,7 +15,10 @@
 		2372159A26E9D9EB00FCD989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2372159826E9D9EB00FCD989 /* LaunchScreen.storyboard */; };
 		237215A326E9F0E700FCD989 /* TrackingPrompt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237215A226E9F0E700FCD989 /* TrackingPrompt.storyboard */; };
 		237215A526E9F10500FCD989 /* TrackingPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237215A426E9F10500FCD989 /* TrackingPromptViewController.swift */; };
-		237215A826E9FA4A00FCD989 /* Lato in Resources */ = {isa = PBXBuildFile; fileRef = 237215A726E9FA4A00FCD989 /* Lato */; };
+		237215B426EA2EB400FCD989 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 237215B026EA2EB400FCD989 /* Lato-Bold.ttf */; };
+		237215B526EA2EB400FCD989 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 237215B126EA2EB400FCD989 /* Lato-Regular.ttf */; };
+		237215B626EA2EB400FCD989 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 237215B226EA2EB400FCD989 /* Lato-Light.ttf */; };
+		237215B726EA2EB400FCD989 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 237215B326EA2EB400FCD989 /* Lato-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +32,10 @@
 		2372159B26E9D9EB00FCD989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		237215A226E9F0E700FCD989 /* TrackingPrompt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrackingPrompt.storyboard; sourceTree = "<group>"; };
 		237215A426E9F10500FCD989 /* TrackingPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingPromptViewController.swift; sourceTree = "<group>"; };
-		237215A726E9FA4A00FCD989 /* Lato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lato; sourceTree = "<group>"; };
+		237215B026EA2EB400FCD989 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		237215B126EA2EB400FCD989 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		237215B226EA2EB400FCD989 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		237215B326EA2EB400FCD989 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +93,20 @@
 		237215A626E9FA3000FCD989 /* bayut_fonts */ = {
 			isa = PBXGroup;
 			children = (
-				237215A726E9FA4A00FCD989 /* Lato */,
+				237215AF26EA2EB400FCD989 /* Lato */,
 			);
 			path = bayut_fonts;
+			sourceTree = "<group>";
+		};
+		237215AF26EA2EB400FCD989 /* Lato */ = {
+			isa = PBXGroup;
+			children = (
+				237215B026EA2EB400FCD989 /* Lato-Bold.ttf */,
+				237215B126EA2EB400FCD989 /* Lato-Regular.ttf */,
+				237215B226EA2EB400FCD989 /* Lato-Light.ttf */,
+				237215B326EA2EB400FCD989 /* Lato-Medium.ttf */,
+			);
+			path = Lato;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,10 +167,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2372159A26E9D9EB00FCD989 /* LaunchScreen.storyboard in Resources */,
+				237215B426EA2EB400FCD989 /* Lato-Bold.ttf in Resources */,
 				237215A326E9F0E700FCD989 /* TrackingPrompt.storyboard in Resources */,
 				2372159726E9D9EB00FCD989 /* Assets.xcassets in Resources */,
-				237215A826E9FA4A00FCD989 /* Lato in Resources */,
+				237215B726EA2EB400FCD989 /* Lato-Medium.ttf in Resources */,
+				237215B526EA2EB400FCD989 /* Lato-Regular.ttf in Resources */,
 				2372159526E9D9EA00FCD989 /* Main.storyboard in Resources */,
+				237215B626EA2EB400FCD989 /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
