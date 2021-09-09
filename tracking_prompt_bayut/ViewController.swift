@@ -15,10 +15,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func askPermission(_ sender: UIButton) {
-        /* let sb = UIStoryboard(name: "MainStoryboard", bundle: nil)
-         let vc = sb.instantiateViewController(withIdentifier: "vc-identifier") */
-        let sb = UIStoryboard(name: "TrackingPrompt", bundle: nil)
+      let sb = UIStoryboard(name: "TrackingPrompt", bundle: nil)
         let trackingPromptVC = sb.instantiateViewController(withIdentifier: "TrackingPrompt")
+        trackingPromptVC.modalPresentationStyle = .fullScreen
         present(trackingPromptVC, animated: true) {
             
         }

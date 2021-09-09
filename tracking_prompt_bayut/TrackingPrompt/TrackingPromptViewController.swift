@@ -6,9 +6,24 @@ class TrackingPromptViewController: UIViewController {
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let screenRect = UIScreen.main.bounds
+        let screenWidth = screenRect.size.width
+        let screenHeight = screenRect.size.height
+        scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight)
+
+//        let contentRect: CGRect = scrollView.subviews.reduce(into: .zero) { rect, view in
+//            rect = rect.union(view.frame)
+  //      }
+//        scrollView.contentSize = contentRect.size
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        
         continueButton.layer.cornerRadius = 4
+        
         let permissionDescription = "We need your permission to ensure the content we share is relevant and personalized to you.\n\nTap \"Allow\" on the next screen to help us personalize your experience."
         let attributedString = NSMutableAttributedString.init(string: permissionDescription)
         let range = NSString(string: permissionDescription).range(of: "\"Allow\"", options: String.CompareOptions.caseInsensitive)
@@ -16,6 +31,7 @@ class TrackingPromptViewController: UIViewController {
                                         NSAttributedString.Key.font : UIFont(name: "Lato-Bold", size: 16)!
         ], range: range)
         permissionDescriptionLabel.attributedText = attributedString
+   
     }
     
     @IBAction func onPressedContinue(_ sender: UIButton) {
