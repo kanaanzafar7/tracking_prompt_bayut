@@ -58,29 +58,43 @@
                                                 <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can always change this preference from your settings later" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDJ-qf-Eiu">
-                                                <rect key="frame" x="32" y="585.33333333333337" width="350" height="40"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ubf-Cn-Zpo" userLabel="FooterView">
+                                                <rect key="frame" x="0.0" y="450.33333333333326" width="414" height="285.66666666666674"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCm-1r-eUB">
+                                                        <rect key="frame" x="32" y="168.66666666666669" width="350" height="48"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.3411764705882353" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="05Q-de-5Da"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                        <state key="normal" title="Continue">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onPressedContinue:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Fyq-ka-1PF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can always change this preference from your settings later" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDJ-qf-Eiu">
+                                                        <rect key="frame" x="32" y="232.66666666666669" width="350" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="NGN-Sn-IYq"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                        <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="aVR-vc-slK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="YDJ-qf-Eiu" secondAttribute="bottom" constant="13" id="2Vj-vR-cma"/>
+                                                    <constraint firstItem="YDJ-qf-Eiu" firstAttribute="top" secondItem="DCm-1r-eUB" secondAttribute="bottom" constant="16" id="Cx2-H4-s5q"/>
+                                                    <constraint firstAttribute="trailing" secondItem="DCm-1r-eUB" secondAttribute="trailing" constant="32" id="eqY-Ml-Yas"/>
+                                                    <constraint firstAttribute="trailing" secondItem="YDJ-qf-Eiu" secondAttribute="trailing" constant="32" id="vZW-bS-uSF"/>
+                                                    <constraint firstItem="DCm-1r-eUB" firstAttribute="leading" secondItem="Ubf-Cn-Zpo" secondAttribute="leading" constant="32" id="yhM-GK-wyO"/>
+                                                    <constraint firstItem="YDJ-qf-Eiu" firstAttribute="leading" secondItem="Ubf-Cn-Zpo" secondAttribute="leading" constant="32" id="yqt-n4-ITz"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                                                <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCm-1r-eUB">
-                                                <rect key="frame" x="32" y="521.33333333333337" width="350" height="48"/>
-                                                <color key="backgroundColor" red="0.0" green="0.3411764705882353" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="stf-uZ-jVv"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
-                                                <state key="normal" title="Continue">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="onPressedContinue:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Fyq-ka-1PF"/>
-                                                </connections>
-                                            </button>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -88,18 +102,16 @@
                                             <constraint firstItem="oLf-rH-KYU" firstAttribute="centerX" secondItem="poe-Q0-V5I" secondAttribute="centerX" id="7b9-Pe-RvM"/>
                                             <constraint firstItem="vq9-ly-6dt" firstAttribute="top" secondItem="hoz-Qg-Adp" secondAttribute="bottom" constant="43.270000000000003" id="A01-W5-f5W"/>
                                             <constraint firstItem="j3P-Ok-YLT" firstAttribute="leading" secondItem="poe-Q0-V5I" secondAttribute="leading" constant="38" id="A84-Qx-3Ca"/>
-                                            <constraint firstItem="YDJ-qf-Eiu" firstAttribute="leading" secondItem="poe-Q0-V5I" secondAttribute="leading" constant="32" id="DQF-wC-Gyv"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ubf-Cn-Zpo" secondAttribute="trailing" id="B4w-nJ-S5T"/>
                                             <constraint firstItem="oLf-rH-KYU" firstAttribute="top" secondItem="poe-Q0-V5I" secondAttribute="top" constant="28" id="HWG-Uc-he5"/>
                                             <constraint firstAttribute="trailing" secondItem="hoz-Qg-Adp" secondAttribute="trailing" constant="38" id="Ja1-Lh-NDc"/>
-                                            <constraint firstItem="DCm-1r-eUB" firstAttribute="leading" secondItem="poe-Q0-V5I" secondAttribute="leading" constant="32" id="QhN-D8-L9s"/>
+                                            <constraint firstItem="Ubf-Cn-Zpo" firstAttribute="leading" secondItem="poe-Q0-V5I" secondAttribute="leading" id="Jrj-kN-e8x"/>
                                             <constraint firstItem="hoz-Qg-Adp" firstAttribute="leading" secondItem="poe-Q0-V5I" secondAttribute="leading" constant="38" id="VpU-fI-NHQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="DCm-1r-eUB" secondAttribute="trailing" constant="32" id="W4G-Fj-59q"/>
-                                            <constraint firstAttribute="trailing" secondItem="YDJ-qf-Eiu" secondAttribute="trailing" constant="32" id="Y6j-H4-C8y"/>
                                             <constraint firstAttribute="trailing" secondItem="j3P-Ok-YLT" secondAttribute="trailing" constant="38" id="gAX-Ms-Ao3"/>
-                                            <constraint firstItem="YDJ-qf-Eiu" firstAttribute="top" secondItem="DCm-1r-eUB" secondAttribute="bottom" constant="16" id="hEQ-wD-xMK"/>
                                             <constraint firstAttribute="trailing" secondItem="vq9-ly-6dt" secondAttribute="trailing" constant="32" id="htM-6W-DEb"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ubf-Cn-Zpo" secondAttribute="bottom" id="jxY-Oa-hqv"/>
                                             <constraint firstItem="j3P-Ok-YLT" firstAttribute="top" secondItem="vq9-ly-6dt" secondAttribute="bottom" constant="41" id="lVT-Wo-TYZ"/>
-                                            <constraint firstItem="DCm-1r-eUB" firstAttribute="top" secondItem="j3P-Ok-YLT" secondAttribute="bottom" constant="71" id="oyG-2O-UZX"/>
+                                            <constraint firstItem="Ubf-Cn-Zpo" firstAttribute="top" secondItem="j3P-Ok-YLT" secondAttribute="bottom" id="thP-GW-Iu9"/>
                                             <constraint firstItem="hoz-Qg-Adp" firstAttribute="top" secondItem="oLf-rH-KYU" secondAttribute="bottom" constant="41.810000000000002" id="vPq-5e-5CR"/>
                                         </constraints>
                                     </view>
