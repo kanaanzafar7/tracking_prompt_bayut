@@ -5,6 +5,10 @@ class TrackingPromptViewController: UIViewController {
     @IBOutlet weak var permissionDescriptionLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var bayutLogo: UIImageView!
+    @IBOutlet weak var building: UIImageView!
+    @IBOutlet weak var helpUsDescription: UILabel!
+    @IBOutlet weak var footerDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +20,8 @@ class TrackingPromptViewController: UIViewController {
                                         NSAttributedString.Key.font : UIFont(name: "Lato-Bold", size: 16)!
         ], range: range)
         permissionDescriptionLabel.attributedText = attributedString
+        addConstraints()
+        
     }
     
     @IBAction func onPressedContinue(_ sender: UIButton) {
@@ -25,5 +31,10 @@ class TrackingPromptViewController: UIViewController {
         ATTrackingManager.requestTrackingAuthorization { authorizationStatus in
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    func addConstraints(){
+        let screenSize =    UIScreen.main.bounds.size
+        print("-----screenSize: \(screenSize.height) and \(screenSize.width)")
     }
 }
