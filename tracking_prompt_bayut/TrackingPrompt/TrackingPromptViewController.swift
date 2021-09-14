@@ -1,22 +1,19 @@
 import UIKit
 import AppTrackingTransparency
 class TrackingPromptViewController: UIViewController {
-    
-    @IBOutlet weak var permissionDescriptionLabel: UILabel!
-    @IBOutlet weak var continueButton: UIButton!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var helpUsDescription: UILabel!
-    @IBOutlet weak var footerDescription: UILabel!
+    //MARK: - Properties
     var screenSize: CGSize!
     
+    //MARK: - IBOutlets
+    @IBOutlet weak var permissionDescriptionLabel: UILabel!
+    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var helpUsDescription: UILabel!
+   
     //MARK: - IBOutlets for constraints
-    
-    
     @IBOutlet weak var logoConstraintForTop: NSLayoutConstraint!
     @IBOutlet weak var buildingConstraintForTop: NSLayoutConstraint!
     @IBOutlet weak var helpUsLabelConstraintForTop: NSLayoutConstraint!
     @IBOutlet weak var permissionDescriptionConstraintForTop: NSLayoutConstraint!
-    
     @IBOutlet weak var footerDescriptionConstraintForBottom: NSLayoutConstraint!
     
     

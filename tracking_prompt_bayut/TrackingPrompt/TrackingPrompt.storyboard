@@ -98,9 +98,7 @@
                     <connections>
                         <outlet property="buildingConstraintForTop" destination="KaM-Mq-KC8" id="epA-3J-fGO"/>
                         <outlet property="continueButton" destination="DCm-1r-eUB" id="w5S-fR-95e"/>
-                        <outlet property="footerDescription" destination="YDJ-qf-Eiu" id="Gmj-L4-99d"/>
                         <outlet property="footerDescriptionConstraintForBottom" destination="jYH-gD-wd0" id="n4r-lq-dZa"/>
-                        <outlet property="helpUsDescription" destination="vq9-ly-6dt" id="WRO-KB-6Of"/>
                         <outlet property="helpUsLabelConstraintForTop" destination="Iq8-Fb-deR" id="IWo-Lb-eXJ"/>
                         <outlet property="logoConstraintForTop" destination="UJg-v5-ueg" id="c52-09-Mbx"/>
                         <outlet property="permissionDescriptionConstraintForTop" destination="QN8-Xo-ibC" id="xjs-2A-4xp"/>
