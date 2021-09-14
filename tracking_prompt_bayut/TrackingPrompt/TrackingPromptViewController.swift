@@ -5,11 +5,23 @@ class TrackingPromptViewController: UIViewController {
     @IBOutlet weak var permissionDescriptionLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var bayutLogo: UIImageView!
-    @IBOutlet weak var building: UIImageView!
     @IBOutlet weak var helpUsDescription: UILabel!
     @IBOutlet weak var footerDescription: UILabel!
     var screenSize: CGSize!
+    
+    //MARK: - IBOutlets for constraints
+    
+    
+    @IBOutlet weak var logoConstraintForTop: NSLayoutConstraint!
+    @IBOutlet weak var buildingConstraintForTop: NSLayoutConstraint!
+    @IBOutlet weak var helpUsLabelConstraintForTop: NSLayoutConstraint!
+    @IBOutlet weak var permissionDescriptionConstraintForTop: NSLayoutConstraint!
+    
+    @IBOutlet weak var footerDescriptionConstraintForBottom: NSLayoutConstraint!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         screenSize = UIScreen.main.bounds.size
@@ -27,7 +39,7 @@ class TrackingPromptViewController: UIViewController {
                                         NSAttributedString.Key.font : UIFont(name: "Lato-Bold", size: fontSize)!
         ], range: range)
         permissionDescriptionLabel.attributedText = attributedString
-        addConstraints()
+        updateConstraints()
         
     }
     
@@ -39,8 +51,12 @@ class TrackingPromptViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
     }
-    func addConstraints(){
+    func updateConstraints(){
+        logoConstraintForTop.constant = screenSize.height * 0.03
+        buildingConstraintForTop.constant  = screenSize.height * 0.05
+        helpUsLabelConstraintForTop.constant = screenSize.height * 0.05
+        permissionDescriptionConstraintForTop.constant = screenSize.height * 0.03
+        footerDescriptionConstraintForBottom.constant = screenSize.height * 0.03
         
-        print("-----screenSize: \(screenSize.height) and \(screenSize.width)")
     }
 }
