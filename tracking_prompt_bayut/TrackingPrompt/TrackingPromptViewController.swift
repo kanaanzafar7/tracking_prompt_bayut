@@ -4,10 +4,9 @@ class TrackingPromptViewController: UIViewController {
     //MARK: - Properties
     var screenSize: CGSize!
     
-    //MARK: - IBOutlets
+    //MARK: - IBOutlets for UI
     @IBOutlet weak var permissionDescriptionLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
-    @IBOutlet weak var helpUsDescription: UILabel!
    
     //MARK: - IBOutlets for constraints
     @IBOutlet weak var logoConstraintForTop: NSLayoutConstraint!
@@ -15,9 +14,6 @@ class TrackingPromptViewController: UIViewController {
     @IBOutlet weak var helpUsLabelConstraintForTop: NSLayoutConstraint!
     @IBOutlet weak var permissionDescriptionConstraintForTop: NSLayoutConstraint!
     @IBOutlet weak var footerDescriptionConstraintForBottom: NSLayoutConstraint!
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +50,6 @@ class TrackingPromptViewController: UIViewController {
         helpUsLabelConstraintForTop.constant = screenSize.height * 0.05
         permissionDescriptionConstraintForTop.constant = screenSize.height * 0.03
         footerDescriptionConstraintForBottom.constant = screenSize.height * 0.03
-        
     }
+
 }
