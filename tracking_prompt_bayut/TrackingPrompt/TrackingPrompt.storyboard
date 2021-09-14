@@ -39,6 +39,9 @@
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="building" translatesAutoresizingMaskIntoConstraints="NO" id="hoz-Qg-Adp">
                                                 <rect key="frame" x="38" y="108" width="244" height="96"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hoz-Qg-Adp" secondAttribute="height" multiplier="61:24" id="Yko-nq-zbG"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help us improve your property search experience!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vq9-ly-6dt">
                                                 <rect key="frame" x="32" y="247" width="256" height="60"/>
